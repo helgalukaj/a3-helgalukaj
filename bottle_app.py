@@ -34,7 +34,7 @@ def htmlify(title,text):
 			}
 			table{
 				margin-left:25%%;
-				border : 1,5 px solid black;
+				border : 1.5 px solid black;
 				width : 50%%;
 				border-collapse:collapse;
 			}
@@ -70,8 +70,9 @@ def htmlify(title,text):
 			margin-right: 80px;
 			margin-left: 80px;
 			font-family: 'BenchNine', sans-serif;
-			font-size: 0.5rem
+			
 			text-shadow: white 90px 90px 90px;
+			background-color:rgba(170,170,170,0.4);
 			}
 			h1  {
 			text-align:center;
@@ -79,17 +80,6 @@ def htmlify(title,text):
 			color: #4D4D4D;
 			font-size: 90px;
 			}
-			p{
-			text-align : center;
-			margin-right: 80px;
-			margin-left: 80px;
-			font-family: 'BenchNine', sans-serif;
-			font-size: 0.5rem
-			text-shadow: #FFFFFF 5px 5px 5px;
-			background-color:rgba(170,170,170,0.4);
-			
-			
-
 		</style>
             </head>
             <body>
@@ -110,7 +100,7 @@ def index():
 	help everyone to check over some data and think over their choice
 	</p>
 	<form action="/airlinename" method="POST">
-		<input type="textbox" name="airline" placeholder="Search By Airline Name"/>
+		<input type="text" name="airline" placeholder="Search By Airline Name"/>
 		<input type="submit" value="Search">
 	</form><br/>
 	<form action="/year" method="POST">
@@ -121,9 +111,9 @@ def index():
 		<input type="submit" value="Search">
 	</form><br/>
 	<form action="/column" method="POST">
-		<input type="checkbox" name="column" value="1">Incidents</input>
-		<input type="checkbox" name="column" value="2">Accidents</input>
-		<input type="checkbox" name="column" value="3">Fatalities</input><br/>
+		<input type="checkbox" name="column" value="1"/><label>Incidents</label>
+		<input type="checkbox" name="column" value="2"/><label>Accidents</label>
+		<input type="checkbox" name="column" value="3"/><label>Fatalities</label><br/>
 		<input type="submit" value="Search">
 	</form><br/>
 	<p>The dataset was collected over 54 airline companies.It involves number of km they fly in a week and 
